@@ -1,0 +1,25 @@
+# Tools
+mingit/
+mingit*.zip
+gh-cli/
+gh-cli.zip
+
+# Python temp scripts
+calc_*.py
+check.py
+
+# Other projects
+alerta-prediccion-agotamiento/
+alerta_disponibilidad_*
+documentacion_*
+generar_*.py
+reportes-ipas-*.html
+*.pptx
+*.docx
+*.csv
+*.xlsx
+
+# System
+__pycache__/
+*.pyc
+.env

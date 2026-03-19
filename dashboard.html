@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BD SCM sin + | Resultados 2020–2026</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        @media print {
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+            body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+        }
+        .gradient-header { background: linear-gradient(135deg, #0053e2 0%, #003399 100%); }
+        .card { box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1); }
+        .metric-card { transition: transform 0.2s; }
+        .metric-card:hover { transform: translateY(-2px); }
+        .gold-card { background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%); }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header -->
+    <header class="gradient-header text-white py-6 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-start">
+                <div>
+                    <h1 class="text-2xl font-bold">Resultados 2026 — YTD Acumulado Febrero</h1>
+                    <h2 class="text-base mt-2 font-bold" style="color:#ffc220;">Total Loss Supply Chain & Manufactura</h2>
+                    <p class="text-xs mt-2 font-bold text-blue-200">Protección de Activos — Centroamérica</p>
+                </div>
+                <div class="text-right">
+                    <a href="https://app.powerbi.com/groups/d3e4ab50-8b6a-496b-b1c0-4f3c35600b12/reports/d22e42fc-01ee-4bed-a6a6-8884984ab1f0/ReportSection?experience=power-bi" target="_blank" rel="noopener noreferrer" class="no-print inline-flex items-center gap-2 bg-white text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors text-sm">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                        Dashboard
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-8">
+
+        <!-- % Total Loss SCM -->
+        <section class="mb-8">
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">Indicadores Principales</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="rounded-xl p-6 card text-center" style="background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%);">
+                    <p class="font-bold text-center" style="color: #7a6520;">Total Loss SCM</p>
+                    <p class="text-3xl font-bold mt-2 text-center" style="color: #2a8703;">-$3,304,734</p>
+                    <p class="text-sm font-bold mt-2 text-center" style="color: #8a7530;">-0.30% TY &nbsp; -0.28% LY &nbsp; Alcance 85%</p>
+                </div>
+                <div class="rounded-xl p-6 card text-center" style="background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%);">
+                    <p class="font-bold text-center" style="color: #7a6520;">Total Loss Supply Chain</p>
+                    <p class="text-3xl font-bold mt-2 text-center" style="color: #2a8703;">-$1,946,007</p>
+                    <p class="text-sm font-bold mt-2 text-center" style="color: #8a7530;">-0.21% TY &nbsp; -0.20% LY &nbsp; Alcance 92%</p>
+                </div>
+                <div class="rounded-xl p-6 card text-center" style="background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%);">
+                    <p class="font-bold text-center" style="color: #7a6520;">Total Loss Manufactura</p>
+                    <p class="text-3xl font-bold mt-2 text-center" style="color: #2a8703;">-$1,358,727</p>
+                    <p class="text-sm font-bold mt-2 text-center" style="color: #8a7530;">-0.93% TY &nbsp; -0.81% LY &nbsp; Alcance 75%</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gráficas Total Loss por País y Subdivisión -->
+        <section class="mb-8 grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-xl p-6 card">
+                <h4 class="font-semibold text-gray-700 mb-4">Total Loss por País</h4>
+                <div style="height:220px;"><canvas id="chartTLPais"></canvas></div>
+            </div>
+            <div class="bg-white rounded-xl p-6 card">
+                <h4 class="font-semibold text-gray-700 mb-4">Total Loss por Subdivisión</h4>
+                <div style="height:220px;"><canvas id="chartTLSubdiv"></canvas></div>
+            </div>
+        </section>
+
+        <!-- Participación por Tipo Merma + Total Loss por Componente -->
+        <section class="mb-8 grid md:grid-cols-2 gap-6">
+            <div class="bg-white rounded-xl p-6 card">
+                <h4 class="font-semibold text-gray-700 mb-4">Participación por Tipo Merma</h4>
+                <div style="height:280px;"><canvas id="chartTipoMerma"></canvas></div>
+            </div>
+            <div class="bg-white rounded-xl p-6 card">
+                <h4 class="font-semibold text-gray-700 mb-4">Total Loss por Componente</h4>
+                <div style="height:280px;"><canvas id="chartComponente"></canvas></div>
+            </div>
+            <div class="bg-white rounded-xl p-6 card">
+                <h4 class="font-semibold text-gray-700 mb-4">Logística</h4>
+                <div style="height:280px;"><canvas id="chartCompLog"></canvas></div>
+            </div>
+            <div class="bg-white rounded-xl p-6 card">
+                <h4 class="font-semibold text-gray-700 mb-4">Frutas & Vegetales</h4>
+                <div style="height:280px;"><canvas id="chartCompFyV"></canvas></div>
+            </div>
+            <div class="bg-white rounded-xl p-6 card">
+                <h4 class="font-semibold text-gray-700 mb-4">Proteínas</h4>
+                <div style="height:280px;"><canvas id="chartCompProt"></canvas></div>
+            </div>
+            <div class="bg-white rounded-xl p-6 card">
+                <h4 class="font-semibold text-gray-700 mb-4">Industrial</h4>
+                <div style="height:280px;"><canvas id="chartCompInd"></canvas></div>
+            </div>
+        </section>
+
+        <!-- Tabla Total Loss por CD/Planta -->
+        <section class="mb-8">
+            <h3 class="text-lg font-semibold text-gray-700 mb-4">Total Loss por CD / Planta (Ene-Feb 2026)</h3>
+            <div class="bg-white rounded-xl card overflow-hidden">
+                <table class="w-full text-sm">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="px-3 py-2 text-center">#</th>
+                            <th class="px-3 py-2 text-left">CD / Planta</th>
+                            <th class="px-3 py-2 text-right">Monto Total Loss</th>
+                            <th class="px-3 py-2 text-right">% TL TY</th>
+                            <th class="px-3 py-2 text-right">% TL LY</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">1</td><td class="px-3 py-2 font-medium">Ind. Avícola (POLLO)</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$483,691</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-3.70%</td><td class="px-3 py-2 text-right">-3.35%</td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">2</td><td class="px-3 py-2 font-medium">FyV NI</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$296,560</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-2.09%</td><td class="px-3 py-2 text-right">-0.84%</td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">3</td><td class="px-3 py-2 font-medium">Granos CR</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$135,344</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-1.71%</td><td class="px-3 py-2 text-right">-1.65%</td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">4</td><td class="px-3 py-2 font-medium">FyV HN</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$134,849</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-1.37%</td><td class="px-3 py-2 text-right">-1.77%</td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">5</td><td class="px-3 py-2 font-medium">FyV GT</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$165,521</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-1.27%</td><td class="px-3 py-2 text-right">-0.62%</td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">6</td><td class="px-3 py-2 font-medium">ICI CR</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$342,614</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-1.16%</td><td class="px-3 py-2 text-right">-0.24%</td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">7</td><td class="px-3 py-2 font-medium">PEH CR</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$29,511</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-0.99%</td><td class="px-3 py-2 text-right">-1.41%</td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">8</td><td class="px-3 py-2 font-medium">PDC CR</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$210,221</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-0.87%</td><td class="px-3 py-2 text-right text-gray-400">N/A</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">9</td><td class="px-3 py-2 font-medium">FyV CR</td><td class="px-3 py-2 text-right text-red-600">-$246,457</td><td class="px-3 py-2 text-right text-red-600">-0.78%</td><td class="px-3 py-2 text-right">-0.78%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">10</td><td class="px-3 py-2 font-medium">CP GT</td><td class="px-3 py-2 text-right text-red-600">-$13,420</td><td class="px-3 py-2 text-right text-red-600">-0.76%</td><td class="px-3 py-2 text-right">-1.66%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">11</td><td class="px-3 py-2 font-medium">FyV ES</td><td class="px-3 py-2 text-right text-red-600">-$35,532</td><td class="px-3 py-2 text-right text-red-600">-0.65%</td><td class="px-3 py-2 text-right">-3.39%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">12</td><td class="px-3 py-2 font-medium">ICI NI</td><td class="px-3 py-2 text-right text-red-600">-$187,634</td><td class="px-3 py-2 text-right text-red-600">-0.54%</td><td class="px-3 py-2 text-right">-0.74%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">13</td><td class="px-3 py-2 font-medium">ICI GT</td><td class="px-3 py-2 text-right text-red-600">-$112,600</td><td class="px-3 py-2 text-right text-red-600">-0.51%</td><td class="px-3 py-2 text-right">-0.52%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">14</td><td class="px-3 py-2 font-medium">ICI ES</td><td class="px-3 py-2 text-right text-red-600">-$42,329</td><td class="px-3 py-2 text-right text-red-600">-0.29%</td><td class="px-3 py-2 text-right">-0.11%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">15</td><td class="px-3 py-2 font-medium">Ind. Avícola (HUEVO)</td><td class="px-3 py-2 text-right text-red-600">-$17,432</td><td class="px-3 py-2 text-right text-red-600">-0.20%</td><td class="px-3 py-2 text-right">-0.14%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">16</td><td class="px-3 py-2 font-medium">CD Mateare</td><td class="px-3 py-2 text-right text-red-600">-$130,651</td><td class="px-3 py-2 text-right text-red-600">-0.17%</td><td class="px-3 py-2 text-right">-0.08%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">17</td><td class="px-3 py-2 font-medium">Huevo HN</td><td class="px-3 py-2 text-right text-red-600">-$3,696</td><td class="px-3 py-2 text-right text-red-600">-0.15%</td><td class="px-3 py-2 text-right">-0.25%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">18</td><td class="px-3 py-2 font-medium">CD Coyol</td><td class="px-3 py-2 text-right text-red-600">-$437,359</td><td class="px-3 py-2 text-right text-red-600">-0.13%</td><td class="px-3 py-2 text-right">-0.21%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">19</td><td class="px-3 py-2 font-medium">CD Apopa</td><td class="px-3 py-2 text-right text-red-600">-$107,550</td><td class="px-3 py-2 text-right text-red-600">-0.12%</td><td class="px-3 py-2 text-right">-0.05%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">20</td><td class="px-3 py-2 font-medium">Ind. Avícola (CORIG)</td><td class="px-3 py-2 text-right text-red-600">-$6,988</td><td class="px-3 py-2 text-right text-red-600">-0.10%</td><td class="px-3 py-2 text-right">0.00%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">21</td><td class="px-3 py-2 font-medium">CD SPS</td><td class="px-3 py-2 text-right text-red-600">-$26,065</td><td class="px-3 py-2 text-right text-red-600">-0.07%</td><td class="px-3 py-2 text-right">-0.08%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">22</td><td class="px-3 py-2 font-medium">CD Bárcenas</td><td class="px-3 py-2 text-right text-red-600">-$130,258</td><td class="px-3 py-2 text-right text-red-600">-0.06%</td><td class="px-3 py-2 text-right">-0.05%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">23</td><td class="px-3 py-2 font-medium">CD TGU</td><td class="px-3 py-2 text-right text-red-600">-$15,111</td><td class="px-3 py-2 text-right text-red-600">-0.04%</td><td class="px-3 py-2 text-right">-0.02%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">24</td><td class="px-3 py-2 font-medium">CD SJO</td><td class="px-3 py-2 text-right text-red-600">-$1,982</td><td class="px-3 py-2 text-right text-red-600">-0.02%</td><td class="px-3 py-2 text-right">-0.02%</td></tr>
+                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">25</td><td class="px-3 py-2 font-medium">CD Amatitlán</td><td class="px-3 py-2 text-right text-red-600">-$4,196</td><td class="px-3 py-2 text-right text-red-600">-0.02%</td><td class="px-3 py-2 text-right">-0.02%</td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">26</td><td class="px-3 py-2 font-medium">Granos NI</td><td class="px-3 py-2 text-right text-green-600 font-semibold">$12,836</td><td class="px-3 py-2 text-right text-green-600 font-semibold">0.40%</td><td class="px-3 py-2 text-right">-1.08%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+
+        <footer class="gradient-header text-center py-3">
+            <p class="text-white text-sm font-medium">Confidential — Walmart</p>
+        </footer>
+    </main>
+
+    <script>
+        const W={blue:'#0053e2',spark:'#ffc220',green:'#2a8703',red:'#ea1100',gray:'#74767c'};
+        const defP={legend:{position:'bottom',labels:{font:{size:10},boxWidth:12,padding:8}}};
+
+        // Participación por Tipo Merma
+        new Chart(document.getElementById('chartTipoMerma'),{
+            type:'pie',plugins:[ChartDataLabels],
+            data:{labels:['Shrink','Da\u00f1ado'],
+                datasets:[{data:[1641628,1697503],
+                    backgroundColor:['#7f1d1d','#e85d04'],
+                    borderWidth:2,borderColor:'#fff'}]},
+            options:{responsive:true,maintainAspectRatio:false,
+                plugins:{legend:{position:'bottom',labels:{font:{size:9},boxWidth:10,padding:6}},
+                    datalabels:{color:'#fff',font:{size:12,weight:'bold'},
+                    formatter:(v,ctx)=>{let s=ctx.dataset.data.reduce((a,b)=>a+b,0);return(v*100/s).toFixed(1)+'%'}}}}
+        });
+
+        // Total Loss por Componente (celeste degradado)
+        new Chart(document.getElementById('chartComponente'),{
+            type:'pie',plugins:[ChartDataLabels],
+            data:{labels:['Total Da\u00f1o','Acreditaciones','Ajustes','Contributions','Rendimiento','Prd. Vta Terceros'],
+                datasets:[{data:[1533052,924444,502901,164451,159858,54425],
+                    backgroundColor:['#0c4a6e','#0369a1','#0ea5e9','#38bdf8','#7dd3fc','#bae6fd'],
+                    borderWidth:2,borderColor:'#fff'}]},
+            options:{responsive:true,maintainAspectRatio:false,
+                plugins:{legend:{position:'bottom',labels:{font:{size:8},boxWidth:10,padding:6}},
+                    datalabels:{color:(ctx)=>ctx.dataIndex<3?'#fff':'#0c4a6e',font:{size:10,weight:'bold'},
+                    formatter:(v,ctx)=>{let s=ctx.dataset.data.reduce((a,b)=>a+b,0);return(v*100/s).toFixed(1)+'%'}}}}
+        });
+
+        // % Total Loss por País
+        new Chart(document.getElementById('chartTLPais'),{
+            type:'bar',
+            data:{labels:['Costa Rica','Guatemala','El Salvador','Honduras','Nicaragua'],
+                datasets:[{label:'% Total Loss',data:[0.41,0.15,0.17,0.20,0.46],
+                    backgroundColor:['#60a5fa','#60a5fa','#60a5fa','#60a5fa','#60a5fa'],borderRadius:8}]},
+            options:{responsive:true,maintainAspectRatio:false,
+                plugins:{legend:{display:false}},
+                scales:{y:{beginAtZero:true,title:{display:true,text:'% Total Loss'},ticks:{callback:v=>v.toFixed(2)+'%'}},x:{grid:{display:false}}}}
+        });
+
+        // % Total Loss por Subdivisión
+        new Chart(document.getElementById('chartTLSubdiv'),{
+            type:'bar',
+            data:{labels:['Frutas & Vegetales','Industrial','Prote\u00ednas','Log\u00edstica'],
+                datasets:[{label:'% Total Loss',data:[1.17,1.05,0.92,0.12],
+                    backgroundColor:['#86efac','#86efac','#86efac','#86efac'],borderRadius:8}]},
+            options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
+                plugins:{legend:{display:false}},
+                scales:{x:{beginAtZero:true,ticks:{callback:v=>v.toFixed(2)+'%'}},y:{grid:{display:false}}}}
+        });
+
+
+
+
+        // Subdivisión - Logística (azul degradado)
+        const compLbls=['Total Da\u00f1o','Acreditaciones','Ajustes','Contributions','Rendimiento','Prd. Vta Terceros'];
+        const compOpts={responsive:true,maintainAspectRatio:false,
+            plugins:{legend:{position:'bottom',labels:{font:{size:8},boxWidth:10,padding:6}},
+                datalabels:{color:(ctx)=>ctx.dataIndex<3?'#fff':'#333',font:{size:10,weight:'bold'},
+                    display:(ctx)=>ctx.dataset.data[ctx.dataIndex]>0,
+                    formatter:(v,ctx)=>{let s=ctx.dataset.data.reduce((a,b)=>a+b,0);return s>0?(v*100/s).toFixed(1)+'%':''}}}};
+
+        new Chart(document.getElementById('chartCompLog'),{
+            type:'pie',plugins:[ChartDataLabels],
+            data:{labels:compLbls,datasets:[{data:[265108,622675,115915,46891,0,15943],
+                backgroundColor:['#1e3a5f','#0053e2','#3b82f6','#60a5fa','#93c5fd','#bfdbfe'],borderWidth:2,borderColor:'#fff'}]},
+            options:compOpts
+        });
+
+        // Subdivisión - Frutas & Vegetales (verde degradado)
+        new Chart(document.getElementById('chartCompFyV'),{
+            type:'pie',plugins:[ChartDataLabels],
+            data:{labels:compLbls,datasets:[{data:[621018,103844,20032,117560,0,38482],
+                backgroundColor:['#14532d','#166534','#22c55e','#4ade80','#86efac','#bbf7d0'],borderWidth:2,borderColor:'#fff'}]},
+            options:compOpts
+        });
+
+        // Subdivisión - Proteínas (amarillo degradado)
+        new Chart(document.getElementById('chartCompProt'),{
+            type:'pie',plugins:[ChartDataLabels],
+            data:{labels:compLbls,datasets:[{data:[644683,196488,352117,0,0,0],
+                backgroundColor:['#78350f','#a16207','#eab308','#facc15','#fde047','#fef9c3'],borderWidth:2,borderColor:'#fff'}]},
+            options:{...compOpts,plugins:{...compOpts.plugins,datalabels:{...compOpts.plugins.datalabels,color:(ctx)=>ctx.dataIndex<2?'#fff':'#78350f'}}}
+        });
+
+        // Subdivisión - Industrial (morado degradado)
+        new Chart(document.getElementById('chartCompInd'),{
+            type:'pie',plugins:[ChartDataLabels],
+            data:{labels:compLbls,datasets:[{data:[2243,1437,14836,0,159858,0],
+                backgroundColor:['#3b0764','#6b21a8','#9333ea','#a855f7','#c084fc','#e9d5ff'],borderWidth:2,borderColor:'#fff'}]},
+            options:compOpts
+        });
+    </script>
+</body>
+</html>
