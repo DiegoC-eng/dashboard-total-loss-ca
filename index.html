@@ -52,17 +52,68 @@
                 <div class="rounded-xl p-6 card text-center" style="background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%);">
                     <p class="font-bold text-center" style="color: #7a6520;">Total Loss SCM</p>
                     <p class="text-3xl font-bold mt-2 text-center" style="color: #2a8703;">-$3,304,734</p>
-                    <p class="text-sm font-bold mt-2 text-center" style="color: #8a7530;">-0.30% TY &nbsp; -0.28% LY &nbsp; Alcance 85%</p>
+                    <div class="grid grid-cols-4 gap-1 mt-3 border-t pt-3" style="border-color:#e6c94a;">
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">TY</p>
+                            <p class="text-sm font-bold" style="color:#7a6520;">-0.30%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">LY</p>
+                            <p class="text-sm font-bold" style="color:#7a6520;">-0.28%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">Plan</p>
+                            <p class="text-sm font-bold" style="color:#7a6520;">-0.26%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">Alc.</p>
+                            <p class="text-sm font-bold" style="color:#ea1100;">75%</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="rounded-xl p-6 card text-center" style="background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%);">
                     <p class="font-bold text-center" style="color: #7a6520;">Total Loss Supply Chain</p>
                     <p class="text-3xl font-bold mt-2 text-center" style="color: #2a8703;">-$1,946,007</p>
-                    <p class="text-sm font-bold mt-2 text-center" style="color: #8a7530;">-0.21% TY &nbsp; -0.20% LY &nbsp; Alcance 92%</p>
+                    <div class="grid grid-cols-4 gap-1 mt-3 border-t pt-3" style="border-color:#e6c94a;">
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">TY</p>
+                            <p class="text-sm font-bold" style="color:#7a6520;">-0.21%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">LY</p>
+                            <p class="text-sm font-bold" style="color:#7a6520;">-0.20%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">Plan</p>
+                            <p class="text-sm font-bold" style="color:#7a6520;">-0.22%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">Alc.</p>
+                            <p class="text-sm font-bold" style="color:#ea1100;">92%</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="rounded-xl p-6 card text-center" style="background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%);">
                     <p class="font-bold text-center" style="color: #7a6520;">Total Loss Manufactura</p>
                     <p class="text-3xl font-bold mt-2 text-center" style="color: #2a8703;">-$1,358,727</p>
-                    <p class="text-sm font-bold mt-2 text-center" style="color: #8a7530;">-0.93% TY &nbsp; -0.81% LY &nbsp; Alcance 75%</p>
+                    <div class="grid grid-cols-4 gap-1 mt-3 border-t pt-3" style="border-color:#e6c94a;">
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">TY</p>
+                            <p class="text-sm font-bold" style="color:#7a6520;">-0.93%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">LY</p>
+                            <p class="text-sm font-bold" style="color:#7a6520;">-0.81%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">Plan</p>
+                            <p class="text-sm font-bold" style="color:#7a6520;">-0.37%</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-xs font-semibold" style="color:#8a7530;">Alc.</p>
+                            <p class="text-sm font-bold" style="color:#ea1100;">75%</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
@@ -107,47 +158,76 @@
             </div>
         </section>
 
-        <!-- Tabla Total Loss por CD/Planta -->
+        <!-- Tablas Total Loss por CD/Planta -->
         <section class="mb-8">
-            <h3 class="text-lg font-semibold text-gray-700 mb-4">Total Loss por CD/Planta</h3>
-            <div class="bg-white rounded-xl card overflow-hidden">
+            <!-- TABLA 1: Fuera de Logro -->
+            <h3 class="text-base font-bold text-red-700 mb-2 flex items-center gap-2">
+                <span class="inline-block w-3 h-3 rounded-full bg-red-500"></span>
+                CD/Planta Fuera Logro (Requieren Atención)
+            </h3>
+            <div class="bg-white rounded-xl card overflow-hidden mb-6">
                 <table class="w-full text-sm">
-                    <thead class="bg-blue-600 text-white">
+                    <thead class="bg-red-700 text-white">
                         <tr>
                             <th class="px-3 py-2 text-center">#</th>
                             <th class="px-3 py-2 text-left">CD / Planta</th>
-                            <th class="px-3 py-2 text-right">Monto Total Loss</th>
+                            <th class="px-3 py-2 text-right">Monto</th>
                             <th class="px-3 py-2 text-right">% TL TY</th>
                             <th class="px-3 py-2 text-right">% TL LY</th>
+                            <th class="px-3 py-2 text-right">% Plan</th>
+                            <th class="px-3 py-2 text-right">% Alcance</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">1</td><td class="px-3 py-2 font-medium">Ind. Avícola (POLLO)</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$483,691</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-3.70%</td><td class="px-3 py-2 text-right">-3.35%</td></tr>
-                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">2</td><td class="px-3 py-2 font-medium">FyV NI</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$296,560</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-2.09%</td><td class="px-3 py-2 text-right">-0.84%</td></tr>
-                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">3</td><td class="px-3 py-2 font-medium">Granos CR</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$135,344</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-1.71%</td><td class="px-3 py-2 text-right">-1.65%</td></tr>
-                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">4</td><td class="px-3 py-2 font-medium">FyV HN</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$134,849</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-1.37%</td><td class="px-3 py-2 text-right">-1.77%</td></tr>
-                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">5</td><td class="px-3 py-2 font-medium">FyV GT</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$165,521</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-1.27%</td><td class="px-3 py-2 text-right">-0.62%</td></tr>
-                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">6</td><td class="px-3 py-2 font-medium">ICI CR</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$342,614</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-1.16%</td><td class="px-3 py-2 text-right">-0.24%</td></tr>
-                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">7</td><td class="px-3 py-2 font-medium">PEH CR</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$29,511</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-0.99%</td><td class="px-3 py-2 text-right">-1.41%</td></tr>
-                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">8</td><td class="px-3 py-2 font-medium">PDC CR</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-$210,221</td><td class="px-3 py-2 text-right text-red-600 font-semibold">-0.87%</td><td class="px-3 py-2 text-right text-gray-400">N/A</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">9</td><td class="px-3 py-2 font-medium">FyV CR</td><td class="px-3 py-2 text-right text-red-600">-$246,457</td><td class="px-3 py-2 text-right text-red-600">-0.78%</td><td class="px-3 py-2 text-right">-0.78%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">10</td><td class="px-3 py-2 font-medium">CP GT</td><td class="px-3 py-2 text-right text-red-600">-$13,420</td><td class="px-3 py-2 text-right text-red-600">-0.76%</td><td class="px-3 py-2 text-right">-1.66%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">11</td><td class="px-3 py-2 font-medium">FyV ES</td><td class="px-3 py-2 text-right text-red-600">-$35,532</td><td class="px-3 py-2 text-right text-red-600">-0.65%</td><td class="px-3 py-2 text-right">-3.39%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">12</td><td class="px-3 py-2 font-medium">ICI NI</td><td class="px-3 py-2 text-right text-red-600">-$187,634</td><td class="px-3 py-2 text-right text-red-600">-0.54%</td><td class="px-3 py-2 text-right">-0.74%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">13</td><td class="px-3 py-2 font-medium">ICI GT</td><td class="px-3 py-2 text-right text-red-600">-$112,600</td><td class="px-3 py-2 text-right text-red-600">-0.51%</td><td class="px-3 py-2 text-right">-0.52%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">14</td><td class="px-3 py-2 font-medium">ICI ES</td><td class="px-3 py-2 text-right text-red-600">-$42,329</td><td class="px-3 py-2 text-right text-red-600">-0.29%</td><td class="px-3 py-2 text-right">-0.11%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">15</td><td class="px-3 py-2 font-medium">Ind. Avícola (HUEVO)</td><td class="px-3 py-2 text-right text-red-600">-$17,432</td><td class="px-3 py-2 text-right text-red-600">-0.20%</td><td class="px-3 py-2 text-right">-0.14%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">16</td><td class="px-3 py-2 font-medium">CD Mateare</td><td class="px-3 py-2 text-right text-red-600">-$130,651</td><td class="px-3 py-2 text-right text-red-600">-0.17%</td><td class="px-3 py-2 text-right">-0.08%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">17</td><td class="px-3 py-2 font-medium">Huevo HN</td><td class="px-3 py-2 text-right text-red-600">-$3,696</td><td class="px-3 py-2 text-right text-red-600">-0.15%</td><td class="px-3 py-2 text-right">-0.25%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">18</td><td class="px-3 py-2 font-medium">CD Coyol</td><td class="px-3 py-2 text-right text-red-600">-$437,359</td><td class="px-3 py-2 text-right text-red-600">-0.13%</td><td class="px-3 py-2 text-right">-0.21%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">19</td><td class="px-3 py-2 font-medium">CD Apopa</td><td class="px-3 py-2 text-right text-red-600">-$107,550</td><td class="px-3 py-2 text-right text-red-600">-0.12%</td><td class="px-3 py-2 text-right">-0.05%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">20</td><td class="px-3 py-2 font-medium">Ind. Avícola (CORIG)</td><td class="px-3 py-2 text-right text-red-600">-$6,988</td><td class="px-3 py-2 text-right text-red-600">-0.10%</td><td class="px-3 py-2 text-right">0.00%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">21</td><td class="px-3 py-2 font-medium">CD SPS</td><td class="px-3 py-2 text-right text-red-600">-$26,065</td><td class="px-3 py-2 text-right text-red-600">-0.07%</td><td class="px-3 py-2 text-right">-0.08%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">22</td><td class="px-3 py-2 font-medium">CD Bárcenas</td><td class="px-3 py-2 text-right text-red-600">-$130,258</td><td class="px-3 py-2 text-right text-red-600">-0.06%</td><td class="px-3 py-2 text-right">-0.05%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">23</td><td class="px-3 py-2 font-medium">CD TGU</td><td class="px-3 py-2 text-right text-red-600">-$15,111</td><td class="px-3 py-2 text-right text-red-600">-0.04%</td><td class="px-3 py-2 text-right">-0.02%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">24</td><td class="px-3 py-2 font-medium">CD SJO</td><td class="px-3 py-2 text-right text-red-600">-$1,982</td><td class="px-3 py-2 text-right text-red-600">-0.02%</td><td class="px-3 py-2 text-right">-0.02%</td></tr>
-                        <tr class="border-b hover:bg-gray-50"><td class="px-3 py-2 text-center">25</td><td class="px-3 py-2 font-medium">CD Amatitlán</td><td class="px-3 py-2 text-right text-red-600">-$4,196</td><td class="px-3 py-2 text-right text-red-600">-0.02%</td><td class="px-3 py-2 text-right">-0.02%</td></tr>
-                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">26</td><td class="px-3 py-2 font-medium">Granos NI</td><td class="px-3 py-2 text-right text-green-600 font-semibold">$12,836</td><td class="px-3 py-2 text-right text-green-600 font-semibold">0.40%</td><td class="px-3 py-2 text-right">-1.08%</td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">1</td><td class="px-3 py-2 font-medium">CD Apopa</td><td class="px-3 py-2 text-right text-black">-$107,550</td><td class="px-3 py-2 text-right text-black">-0.12%</td><td class="px-3 py-2 text-right">-0.05%</td><td class="px-3 py-2 text-right text-gray-600">-0.05%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>42%</span></td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">2</td><td class="px-3 py-2 font-medium">ICI GT</td><td class="px-3 py-2 text-right text-black">-$112,600</td><td class="px-3 py-2 text-right text-black">-0.51%</td><td class="px-3 py-2 text-right">-0.52%</td><td class="px-3 py-2 text-right text-gray-600">-0.26%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>51%</span></td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">3</td><td class="px-3 py-2 font-medium">CD Mateare</td><td class="px-3 py-2 text-right text-black">-$130,651</td><td class="px-3 py-2 text-right text-black">-0.17%</td><td class="px-3 py-2 text-right">-0.08%</td><td class="px-3 py-2 text-right text-gray-600">-0.09%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>53%</span></td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">4</td><td class="px-3 py-2 font-medium">ICI CR</td><td class="px-3 py-2 text-right font-semibold text-black">-$342,614</td><td class="px-3 py-2 text-right font-semibold text-black">-1.16%</td><td class="px-3 py-2 text-right">-0.24%</td><td class="px-3 py-2 text-right text-gray-600">-0.64%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>55%</span></td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">5</td><td class="px-3 py-2 font-medium">FyV HN</td><td class="px-3 py-2 text-right font-semibold text-black">-$134,849</td><td class="px-3 py-2 text-right font-semibold text-black">-1.37%</td><td class="px-3 py-2 text-right">-1.77%</td><td class="px-3 py-2 text-right text-gray-600">-0.80%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>58%</span></td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">6</td><td class="px-3 py-2 font-medium">FyV NI</td><td class="px-3 py-2 text-right font-semibold text-black">-$296,560</td><td class="px-3 py-2 text-right font-semibold text-black">-2.09%</td><td class="px-3 py-2 text-right">-0.84%</td><td class="px-3 py-2 text-right text-gray-600">-1.30%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>62%</span></td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">7</td><td class="px-3 py-2 font-medium">Ind. Avícola (POLLO)</td><td class="px-3 py-2 text-right font-semibold text-black">-$483,691</td><td class="px-3 py-2 text-right font-semibold text-black">-3.70%</td><td class="px-3 py-2 text-right">-3.35%</td><td class="px-3 py-2 text-right text-gray-600">-2.55%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>69%</span></td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">8</td><td class="px-3 py-2 font-medium">ICI NI</td><td class="px-3 py-2 text-right text-black">-$187,634</td><td class="px-3 py-2 text-right text-black">-0.54%</td><td class="px-3 py-2 text-right">-0.74%</td><td class="px-3 py-2 text-right text-gray-600">-0.40%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>74%</span></td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">9</td><td class="px-3 py-2 font-medium">CD TGU</td><td class="px-3 py-2 text-right text-black">-$15,111</td><td class="px-3 py-2 text-right text-black">-0.04%</td><td class="px-3 py-2 text-right">-0.02%</td><td class="px-3 py-2 text-right text-gray-600">-0.03%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>75%</span></td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">10</td><td class="px-3 py-2 font-medium">ICI ES</td><td class="px-3 py-2 text-right text-black">-$42,329</td><td class="px-3 py-2 text-right text-black">-0.29%</td><td class="px-3 py-2 text-right">-0.11%</td><td class="px-3 py-2 text-right text-gray-600">-0.26%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>90%</span></td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">11</td><td class="px-3 py-2 font-medium">Ind. Avícola (HUEVO)</td><td class="px-3 py-2 text-right text-black">-$17,432</td><td class="px-3 py-2 text-right text-black">-0.20%</td><td class="px-3 py-2 text-right">-0.14%</td><td class="px-3 py-2 text-right text-gray-600">-0.18%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>90%</span></td></tr>
+                        <tr class="border-b hover:bg-red-50"><td class="px-3 py-2 text-center">12</td><td class="px-3 py-2 font-medium">FyV GT</td><td class="px-3 py-2 text-right font-semibold text-black">-$165,521</td><td class="px-3 py-2 text-right font-semibold text-black">-1.27%</td><td class="px-3 py-2 text-right">-0.62%</td><td class="px-3 py-2 text-right text-gray-600">-1.16%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-red-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-red-500"></span>91%</span></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- TABLA 2: En Logro -->
+            <h3 class="text-base font-bold text-green-700 mb-2 flex items-center gap-2">
+                <span class="inline-block w-3 h-3 rounded-full bg-green-500"></span>
+                CD/Planta en Logro
+            </h3>
+            <div class="bg-white rounded-xl card overflow-hidden">
+                <table class="w-full text-sm">
+                    <thead class="bg-green-700 text-white">
+                        <tr>
+                            <th class="px-3 py-2 text-center">#</th>
+                            <th class="px-3 py-2 text-left">CD / Planta</th>
+                            <th class="px-3 py-2 text-right">Monto</th>
+                            <th class="px-3 py-2 text-right">% TL TY</th>
+                            <th class="px-3 py-2 text-right">% TL LY</th>
+                            <th class="px-3 py-2 text-right">% Plan</th>
+                            <th class="px-3 py-2 text-right">% Alcance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">1</td><td class="px-3 py-2 font-medium">FyV ES</td><td class="px-3 py-2 text-right text-black">-$35,532</td><td class="px-3 py-2 text-right text-black">-0.65%</td><td class="px-3 py-2 text-right">-3.39%</td><td class="px-3 py-2 text-right text-gray-600">-2.30%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>354%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">2</td><td class="px-3 py-2 font-medium">Ind. Avícola (CORIG)</td><td class="px-3 py-2 text-right text-black">-$6,988</td><td class="px-3 py-2 text-right text-black">-0.10%</td><td class="px-3 py-2 text-right">0.00%</td><td class="px-3 py-2 text-right text-gray-600">-0.16%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>160%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">3</td><td class="px-3 py-2 font-medium">CD SJO</td><td class="px-3 py-2 text-right text-black">-$1,982</td><td class="px-3 py-2 text-right text-black">-0.02%</td><td class="px-3 py-2 text-right">-0.02%</td><td class="px-3 py-2 text-right text-gray-600">-0.03%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>150%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">4</td><td class="px-3 py-2 font-medium">CD Amatitlán</td><td class="px-3 py-2 text-right text-black">-$4,196</td><td class="px-3 py-2 text-right text-black">-0.02%</td><td class="px-3 py-2 text-right">-0.02%</td><td class="px-3 py-2 text-right text-gray-600">-0.03%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>150%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">5</td><td class="px-3 py-2 font-medium">PDC CR</td><td class="px-3 py-2 text-right font-semibold text-black">-$210,221</td><td class="px-3 py-2 text-right font-semibold text-black">-0.87%</td><td class="px-3 py-2 text-right text-gray-400">N/A</td><td class="px-3 py-2 text-right text-gray-600">-1.30%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>149%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">6</td><td class="px-3 py-2 font-medium">CP GT</td><td class="px-3 py-2 text-right text-black">-$13,420</td><td class="px-3 py-2 text-right text-black">-0.76%</td><td class="px-3 py-2 text-right">-1.66%</td><td class="px-3 py-2 text-right text-gray-600">-1.04%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>137%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">7</td><td class="px-3 py-2 font-medium">Huevo HN</td><td class="px-3 py-2 text-right text-black">-$3,696</td><td class="px-3 py-2 text-right text-black">-0.15%</td><td class="px-3 py-2 text-right">-0.25%</td><td class="px-3 py-2 text-right text-gray-600">-0.20%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>133%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">8</td><td class="px-3 py-2 font-medium">Granos CR</td><td class="px-3 py-2 text-right font-semibold text-black">-$135,344</td><td class="px-3 py-2 text-right font-semibold text-black">-1.71%</td><td class="px-3 py-2 text-right">-1.65%</td><td class="px-3 py-2 text-right text-gray-600">-2.22%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>130%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">9</td><td class="px-3 py-2 font-medium">FyV CR</td><td class="px-3 py-2 text-right text-black">-$246,457</td><td class="px-3 py-2 text-right text-black">-0.78%</td><td class="px-3 py-2 text-right">-0.78%</td><td class="px-3 py-2 text-right text-gray-600">-1.00%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>128%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">10</td><td class="px-3 py-2 font-medium">PEH CR</td><td class="px-3 py-2 text-right font-semibold text-black">-$29,511</td><td class="px-3 py-2 text-right font-semibold text-black">-0.99%</td><td class="px-3 py-2 text-right">-1.41%</td><td class="px-3 py-2 text-right text-gray-600">-1.04%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>105%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">11</td><td class="px-3 py-2 font-medium">CD Coyol</td><td class="px-3 py-2 text-right text-black">-$437,359</td><td class="px-3 py-2 text-right text-black">-0.13%</td><td class="px-3 py-2 text-right">-0.21%</td><td class="px-3 py-2 text-right text-gray-600">-0.13%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>100%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">12</td><td class="px-3 py-2 font-medium">CD SPS</td><td class="px-3 py-2 text-right text-black">-$26,065</td><td class="px-3 py-2 text-right text-black">-0.07%</td><td class="px-3 py-2 text-right">-0.08%</td><td class="px-3 py-2 text-right text-gray-600">-0.07%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>100%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">13</td><td class="px-3 py-2 font-medium">CD Bárcenas</td><td class="px-3 py-2 text-right text-black">-$130,258</td><td class="px-3 py-2 text-right text-black">-0.06%</td><td class="px-3 py-2 text-right">-0.05%</td><td class="px-3 py-2 text-right text-gray-600">-0.06%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>100%</span></td></tr>
+                        <tr class="border-b hover:bg-green-50"><td class="px-3 py-2 text-center">14</td><td class="px-3 py-2 font-medium">Granos NI</td><td class="px-3 py-2 text-right font-semibold text-black">$12,836</td><td class="px-3 py-2 text-right font-semibold text-black">0.40%</td><td class="px-3 py-2 text-right">-1.08%</td><td class="px-3 py-2 text-right text-gray-600">-1.01%</td><td class="px-3 py-2 text-right"><span class="inline-flex items-center gap-1 font-semibold text-green-600"><span class="inline-block w-2.5 h-2.5 rounded-full bg-green-500"></span>100%</span></td></tr>
                     </tbody>
                 </table>
             </div>
@@ -190,24 +270,66 @@
         });
 
         // % Total Loss por País
+        const metasPais = [0.36, 0.13, 0.17, 0.14, 0.27];
+        const tyPais = [0.41, 0.15, 0.17, 0.20, 0.46];
+        const alcancePais = tyPais.map((ty, i) => Math.round((metasPais[i] / ty) * 100));
+        
         new Chart(document.getElementById('chartTLPais'),{
             type:'bar',
+            plugins:[ChartDataLabels],
             data:{labels:['Costa Rica','Guatemala','El Salvador','Honduras','Nicaragua'],
-                datasets:[{label:'% Total Loss',data:[0.41,0.15,0.17,0.20,0.46],
-                    backgroundColor:['#60a5fa','#60a5fa','#60a5fa','#60a5fa','#60a5fa'],borderRadius:8}]},
+                datasets:[{label:'% Total Loss',data:tyPais,
+                    backgroundColor:'#93c5fd',borderRadius:8}]},
             options:{responsive:true,maintainAspectRatio:false,
-                plugins:{legend:{display:false}},
+                plugins:{
+                    legend:{display:false},
+                    tooltip:{
+                        callbacks:{
+                            title:(ctx)=>ctx[0].label,
+                            label:(ctx)=>[
+                                '% TL: -' + ctx.parsed.y.toFixed(2) + '%',
+                                '% Alcance: ' + alcancePais[ctx.dataIndex] + '%'
+                            ]
+                        }
+                    },
+                    datalabels:{
+                        anchor:'center',align:'center',
+                        color:'#1e3a5f',font:{size:11,weight:'bold'},
+                        formatter:(v)=>'-'+v.toFixed(2)+'%'
+                    }
+                },
                 scales:{y:{beginAtZero:true,title:{display:true,text:'% Total Loss'},ticks:{callback:v=>v.toFixed(2)+'%'}},x:{grid:{display:false}}}}
         });
 
         // % Total Loss por Subdivisión
+        const metasSubdiv = [1.16, 1.69, 0.66, 0.12];
+        const tySubdiv = [1.17, 1.05, 0.92, 0.12];
+        const alcanceSubdiv = tySubdiv.map((ty, i) => Math.round((metasSubdiv[i] / ty) * 100));
+        
         new Chart(document.getElementById('chartTLSubdiv'),{
             type:'bar',
+            plugins:[ChartDataLabels],
             data:{labels:['Frutas & Vegetales','Industrial','Prote\u00ednas','Log\u00edstica'],
-                datasets:[{label:'% Total Loss',data:[1.17,1.05,0.92,0.12],
-                    backgroundColor:['#86efac','#86efac','#86efac','#86efac'],borderRadius:8}]},
+                datasets:[{label:'% Total Loss',data:tySubdiv,
+                    backgroundColor:'#86efac',borderRadius:8}]},
             options:{responsive:true,maintainAspectRatio:false,indexAxis:'y',
-                plugins:{legend:{display:false}},
+                plugins:{
+                    legend:{display:false},
+                    tooltip:{
+                        callbacks:{
+                            title:(ctx)=>ctx[0].label,
+                            label:(ctx)=>[
+                                '% TL: -' + ctx.parsed.x.toFixed(2) + '%',
+                                '% Alcance: ' + alcanceSubdiv[ctx.dataIndex] + '%'
+                            ]
+                        }
+                    },
+                    datalabels:{
+                        anchor:'center',align:'center',
+                        color:'#14532d',font:{size:11,weight:'bold'},
+                        formatter:(v)=>'-'+v.toFixed(2)+'%'
+                    }
+                },
                 scales:{x:{beginAtZero:true,ticks:{callback:v=>v.toFixed(2)+'%'}},y:{grid:{display:false}}}}
         });
 
