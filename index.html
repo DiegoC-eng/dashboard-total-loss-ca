@@ -29,9 +29,10 @@
         <div class="max-w-7xl mx-auto">
             <div class="flex justify-between items-start">
                 <div>
-                    <h1 class="text-2xl font-bold">Resultados 2026 — YTD Acumulado Febrero</h1>
+                    <h1 class="text-2xl font-bold">Resultados 2026 — YTD Acumulado Marzo</h1>
                     <h2 class="text-base mt-2 font-bold" style="color:#ffc220;">Total Loss Supply Chain & Manufactura</h2>
                     <p class="text-xs mt-2 font-bold text-blue-200">Protección de Activos — Centroamérica</p>
+
                 </div>
                 <div class="text-right">
                     <a href="https://app.powerbi.com/groups/d3e4ab50-8b6a-496b-b1c0-4f3c35600b12/reports/d22e42fc-01ee-4bed-a6a6-8884984ab1f0/ReportSection?experience=power-bi" target="_blank" rel="noopener noreferrer" class="no-print inline-flex items-center gap-2 bg-white text-blue-700 font-semibold px-4 py-2 rounded-lg hover:bg-blue-50 transition-colors text-sm">
@@ -51,11 +52,11 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="rounded-xl p-6 card text-center" style="background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%);">
                     <p class="font-bold text-center" style="color: #7a6520;">Total Loss SCM</p>
-                    <p class="text-3xl font-bold mt-2 text-center" style="color: #2a8703;">-$3,304,734</p>
+                    <p class="text-3xl font-bold mt-2 text-center" style="color: #2a8703;">-$3,884,921</p>
                     <div class="grid grid-cols-4 gap-1 mt-3 border-t pt-3" style="border-color:#e6c94a;">
                         <div class="text-center">
                             <p class="text-xs font-semibold" style="color:#8a7530;">TY</p>
-                            <p class="text-sm font-bold" style="color:#7a6520;">-0.30%</p>
+                         <p class="text-sm font-bold" style="color:#7a6520;">-0.28%</p>
                         </div>
                         <div class="text-center">
                             <p class="text-xs font-semibold" style="color:#8a7530;">LY</p>
@@ -67,13 +68,13 @@
                         </div>
                         <div class="text-center">
                             <p class="text-xs font-semibold" style="color:#8a7530;">Alc.</p>
-                            <p class="text-sm font-bold" style="color:#ea1100;">75%</p>
+                            <p class="text-sm font-bold" style="color:#ea1100;">93%</p>
                         </div>
                     </div>
                 </div>
                 <div class="rounded-xl p-6 card text-center" style="background: linear-gradient(135deg, #fff4cc 0%, #ffe680 100%);">
                     <p class="font-bold text-center" style="color: #7a6520;">Total Loss Supply Chain</p>
-                    <p class="text-3xl font-bold mt-2 text-center" style="color: #2a8703;">-$1,946,007</p>
+                    <p class="text-3xl font-bold mt-2 text-center" style="color: #2a8703;">-$2,526,194</p>
                     <div class="grid grid-cols-4 gap-1 mt-3 border-t pt-3" style="border-color:#e6c94a;">
                         <div class="text-center">
                             <p class="text-xs font-semibold" style="color:#8a7530;">TY</p>
@@ -271,8 +272,9 @@
         });
 
         // % Total Loss por País
-        const metasPais = [0.36, 0.13, 0.17, 0.14, 0.27];
-        const tyPais = [0.41, 0.15, 0.17, 0.20, 0.46];
+        // YTD Ene-Mar 2026: (MFG + SC) por país
+        const metasPais = [0.34, 0.12, 0.17, 0.14, 0.25];
+        const tyPais = [0.45, 0.12, 0.17, 0.14, 0.38];
         const alcancePais = tyPais.map((ty, i) => Math.round((metasPais[i] / ty) * 100));
         
         new Chart(document.getElementById('chartTLPais'),{
